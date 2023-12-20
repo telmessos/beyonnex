@@ -8,7 +8,7 @@ Project uses WebdriverIO, Mocha, Allure Reporting
 * Latest version of Allure command line should be installed on your system.
 * To make installation check out this GIT repo, open the project with your favorite IDE, open Console in the IDE and type:
 
-** Important! ** Run specific requirements are mentioned under Local Run and Docker Run titles. Continue to either Local Run or Docker Run sections after this point.
+**Important! Run specific requirements are mentioned under Local Run and Docker Run titles. Continue to either Local Run or Docker Run sections after this point.**
 
 ## Local Run
 
