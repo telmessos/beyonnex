@@ -1,4 +1,4 @@
-# Beyonnex Sample Project
+# Beyonnex Home Assignment Project
 
 This project is a sample project prepared for Beyonnex home assignment using Page Object Model pattern. It tests some basic features on https://weathershopper.pythonanywhere.com/ as requested on the shared document.
 
