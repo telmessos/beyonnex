@@ -18,7 +18,7 @@ exports.config = {
             ],
         }
     }],
-    logLevel: 'warn',
+    logLevel: 'info',
     bail: 0,
     baseUrl: 'https://weathershopper.pythonanywhere.com/',
     waitforTimeout: 10000,
