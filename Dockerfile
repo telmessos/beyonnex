@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a base image
-FROM --platform=linux/amd64 node:20
+FROM node:20
 
 # Install utilities
 RUN apt-get -yqq update && \
