@@ -1,20 +1,15 @@
 # Use an official Node.js runtime as a base image
 FROM node:20
+# Install utilities
+RUN apt-get -yqq update && \
+  apt-get -yqq install curl gnupg libglib2.0-0 libnss3 libdbus-1-3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango1.0-0 libasound2 && \
+  useradd -ms /bin/bash runner
 
-# Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /app
+ADD . /app
 
-# Install git
-RUN apt-get update && apt-get install -y git
+COPY . /app
 
-# Clone the GitHub repository
-RUN git clone https://github.com/telmessos/beyonnex.git .
-
-# Install project dependencies
 RUN npm install
 
-# Expose the port if your tests use a specific port
-# EXPOSE 4444
-
-# Run the tests
-CMD ["npm", "test"]
+CMD npx wdio

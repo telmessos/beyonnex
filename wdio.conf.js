@@ -4,23 +4,27 @@ exports.config = {
     specs: ['./test/specs/**/*.spec.js'],
     exclude: [],
     maxInstances: 1,
-    capabilities: [
-        {
-            maxInstances: 2,
-            browserName: 'chrome',
-            'goog:chromeOptions': {
-                args: ['headless', 'disable-gpu']
-            },
-            acceptInsecureCerts: true,
-        },
-    ],
+    capabilities: [{
+        maxInstances: 1,
+        browserName: 'chrome',
+        browserVersion:'120.0.6099.109',
+        'goog:chromeOptions': {
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+            ],
+        }
+    }],
     logLevel: 'warn',
     bail: 0,
     baseUrl: 'https://weathershopper.pythonanywhere.com/',
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['chromedriver'],
+    services: [],
     before: async function () {
         await browser.maximizeWindow();
     },
